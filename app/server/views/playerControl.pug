@@ -1,0 +1,17 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+  title Tale-O-Potate-v1
+  link(rel='shortcut icon' href='/PlayerControl/TemplateData/favicon.ico')
+  link(rel='stylesheet' href='/PlayerControl/TemplateData/style.css')
+  script(src='/PlayerControl/TemplateData/UnityProgress.js')
+  script(src='/PlayerControl/Build/UnityLoader.js')
+  script.
+    var gameInstance = UnityLoader.instantiate("gameContainer", "/PlayerControl/Build/Player Control.json", {onProgress: UnityProgress});
+.webgl-content
+  #gameContainer(style='width: 960px; height: 600px')
+  .footer
+    .webgl-logo
+    .fullscreen(onclick='gameInstance.SetFullscreen(1)')
+    .title Tale-O-Potate-v1

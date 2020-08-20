@@ -59,11 +59,12 @@ module.exports = function(app) {
 		if (req.session.user == null){
 			res.redirect('/');
 		}	else{
-			res.render('home', {
-				title : 'Control Panel',
-				countries : CT,
-				udata : req.session.user
-			});
+			// res.render('/PlayerContol/index.html', {
+			// 	title : 'Control Panel',
+			// 	countries : CT,
+			// 	udata : req.session.user
+			// });
+			res.render('playerControl');
 		}
 	});
 	
